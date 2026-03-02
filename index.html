@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Retro Arcade - Cadillacs and Dinosaurs</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* গেমের ব্যাকগ্রাউন্ড কালো রাখা ভালো */
+            overflow: hidden;
+        }
+        #game-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container"></div>
+
+    <script>
+        // EmulatorJS এর কনফিগারেশন
+        window.EJS_player = '#game-container';
+        
+        // আর্কেড গেমের জন্য 'arcade' কোর ব্যবহার করতে হবে
+        window.EJS_core = 'arcade'; 
+        
+        // আপনার লোকাল ফোল্ডারে থাকা গেমের ফাইলের লিংক (dino.zip)
+        window.EJS_gameUrl = 'roms/dino.zip'; 
+        
+        // গেমের নাম (সেভ ফাইলের জন্য এটি দরকারি)
+        window.EJS_gameName = 'Cadillacs and Dinosaurs';
+        
+        window.EJS_color = '#e74c3c'; // UI এর কালার থিম
+        window.EJS_startOnLoaded = true; // পেজ লোড হলেই গেম শুরু হবে
+        window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/'; // কোর ফাইলগুলো এখান থেকে আসবে
+    </script>
+
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+</body>
+</html>
